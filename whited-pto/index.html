@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Whited Elementary PTO - Prototype</title>
+    <style>
+      /* Minimal styling for clarity */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1em;
+        line-height: 1.5;
+      }
+      header,
+      nav,
+      section,
+      footer {
+        margin-bottom: 2em;
+      }
+      nav a {
+        margin-right: 1em;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .language-toggle {
+        float: right;
+      }
+      .section-title {
+        font-size: 1.4em;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Simple Header -->
+    <header>
+      <h1>Whited Elementary PTO</h1>
+      <div class="language-toggle">
+        <a href="#" onclick="toggleLanguage('en')">EN</a> |
+        <a href="#" onclick="toggleLanguage('es')">ES</a>
+      </div>
+    </header>
+
+    <!-- Simple Navigation -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#involved">Get Involved</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-title">About Us</div>
+      <p class="text-en">
+        The purpose of the Douglas Whited PTO is to enhance and support the
+        educational experience at Douglas Whited Elementary, to develop a closer
+        connection between school and home, and to improve the environment
+        through volunteer and financial support.
+      </p>
+      <p class="text-es" style="display: none">
+        El propósito de la PTO de Douglas Whited es mejorar y apoyar la
+        experiencia educativa en la Primaria Douglas Whited, desarrollar una
+        conexión más cercana entre la escuela y el hogar, y mejorar el entorno a
+        través del voluntariado y el apoyo financiero.
+      </p>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+      <div class="section-title">Events & Calendar</div>
+      <p class="text-en">
+        Here you can find our upcoming events, including fundraisers, volunteer
+        drives, and school activities. Stay tuned for event dates and ways to
+        help!
+      </p>
+      <p class="text-es" style="display: none">
+        Aquí puede encontrar nuestros próximos eventos, incluyendo recaudaciones
+        de fondos, convocatorias de voluntarios y actividades escolares. ¡Esté
+        atento a las fechas de los eventos y las formas de ayudar!
+      </p>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="involved">
+      <div class="section-title">Get Involved</div>
+      <p class="text-en">
+        Volunteer forms, donation links, and other ways to support Whited
+        Elementary PTO will go here.
+      </p>
+      <p class="text-es" style="display: none">
+        Formas de voluntariado, enlaces de donación y otras maneras de apoyar a
+        Whited Elementary PTO se mostrarán aquí.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-title">Contact Us</div>
+      <p class="text-en">
+        Have a question or want to help? Send us a message at
+        <strong>pto@whited.org</strong>.
+      </p>
+      <p class="text-es" style="display: none">
+        ¿Tiene alguna pregunta o desea ayudar? Envíenos un mensaje a
+        <strong>pto@whited.org</strong>.
+      </p>
+    </section>
+
+    <!-- Simple Language Toggle Script -->
+    <script>
+      function toggleLanguage(lang) {
+        const enElements = document.querySelectorAll(".text-en");
+        const esElements = document.querySelectorAll(".text-es");
+
+        if (lang === "en") {
+          enElements.forEach((el) => (el.style.display = "block"));
+          esElements.forEach((el) => (el.style.display = "none"));
+        } else {
+          enElements.forEach((el) => (el.style.display = "none"));
+          esElements.forEach((el) => (el.style.display = "block"));
+        }
+      }
+    </script>
+  </body>
+</html>
